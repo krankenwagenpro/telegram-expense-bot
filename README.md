@@ -1,27 +1,30 @@
 # Telegram Expense Bot
 
-Telegram-бот для учёта личных расходов. Python, aiogram 3, SQLite.
+A Telegram bot for tracking personal expenses. Built with Python, aiogram 3 and SQLite.
 
-## Возможности
-- `/add 500 еда` — добавить трату
-- `/month` — итоги за текущий месяц по категориям
-- `/last` — последние 5 трат
-- `/undo` — удалить последнюю трату
+## Features
+- `/add 500 food` - add an expense
+- `/month` - spending summary for the current month, grouped by category
+- `/last` - last 5 expenses
+- `/undo` - delete the last expense
 
-Данные каждого пользователя хранятся отдельно (по Telegram user id).
+Each user's data is stored separately (by Telegram user ID).
 
-## Запуск
-1. Создайте бота у [@BotFather](https://t.me/BotFather) и получите токен.
-2. Скопируйте `.env.example` в `.env` и вставьте токен.
-3. Установите зависимости и запустите:
+## Setup
+1. Create a bot with [@BotFather](https://t.me/BotFather) and copy the token.
+2. Copy `.env.example` to `.env` and paste your token.
+3. Install dependencies and run:
 
 ```
 python -m venv .venv
-.venv\Scripts\activate
+.venv\Scripts\activate        # Linux/macOS: source .venv/bin/activate
 pip install -r requirements.txt
 python bot.py
 ```
 
-## Структура
-- `bot.py` — обработчики команд бота
-- `db.py` — работа с базой SQLite
+## Project structure
+- `bot.py` - bot command handlers
+- `db.py` - SQLite data access layer
+
+## Tech stack
+Python 3.10+, aiogram 3, SQLite, python-dotenv
